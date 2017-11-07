@@ -64,7 +64,7 @@ iOS 10 mobile application calculator
       
 #### 12. Create a double var "displayValue"
 ```
-            var displayValue: Double {
+    var displayValue: Double {
         get {
             return Double(display.text!)!
         }
@@ -84,21 +84,34 @@ iOS 10 mobile application calculator
             
             b. func setOperand(_ operand: Double)
 
-#### 16.  Create a private double var "accumulator" and a double var "result"
+#### 16. Create a private double var "accumulator" and a double var "result"
 
 #### 17. Set accumulator to operand within setOperand
 
 #### 18. Return accumulator within result using "get"
 
-#### 19. Go back to ViewController and create func "performOperation"
-
-            a. Set userIsInTheMiddleOfTyping to false
-
-#### 20. Create a private var "brain" that is a CalculatorBrain
+#### 19. Go back to ViewController and create a private var "brain" that is a CalculatorBrain
 
             a. private var brain = CalculatorBrain()
 
-#### 1
+#### 20. Create an addition button and give it an action func of "performOperation"
 
-#### 1
+#### 21. Cheat a little bit by copying this into performOperation, completing the hookup of the "brain" to the UI
+```
+    @IBAction func performOperation(_ sender: UIButton) {
+        if userIsInTheMiddleOfTyping {
+            brain.setOperand(displayValue)
+            userIsInTheMiddleOfTyping = false
+        }
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        
+        if let result = brain.result {
+            displayValue = result
+        }
+
+    }
+```
+
 
