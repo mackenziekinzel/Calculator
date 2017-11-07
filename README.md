@@ -24,7 +24,7 @@ iOS 10 mobile application calculator
 
       a. Now, all of your buttons will be hooked up to the touchDigit method
       
-#### 5. Create a variable "digit" within your method and set it equal to the title of its sender, the button
+#### 5. Create a var "digit" within your method and set it equal to the title of its sender, the button
 
       a. Use "let" instead of "var" in this case
       
@@ -40,7 +40,7 @@ iOS 10 mobile application calculator
       
       c. Name the outlet "display"
 
-#### 7. Create a variable "textCurrentlyInDisplay" and set it equal to the text of the display
+#### 7. Create a var "textCurrentlyInDisplay" and set it equal to the text of the display
 
       a. let textCurrentlyInDisplay = display!.text!
 
@@ -48,7 +48,7 @@ iOS 10 mobile application calculator
 
       a. display!.text = textCurrentlyInDisplay + digit
 
-#### 9. Create a boolian variable "userIsInTheMiddleOfTyping" and set it to false
+#### 9. Create a boolian var "userIsInTheMiddleOfTyping" and set it to false
 
       a. var userIsInTheMiddleOfTyping = false
 
@@ -62,17 +62,43 @@ iOS 10 mobile application calculator
       
       b. Set userIsInTheMiddleOfTyping to true
       
-#### 12. Create a new Swift file, name it "CalculatorBrain"
+#### 12. Create a double var "displayValue"
 
-#### 13. Create a struct for CalculatorBrain
+            ``` var displayValue: Double {
+        get {
+            return Double(display.text!)!
+        }
+        
+        set {
+            display.text = String(newValue)
+        }
+    } ```
+      
+#### 13. Create a new Swift file, name it "CalculatorBrain"
 
-#### 14. Create functions "performOperation" and "setOperand" within the struct
+#### 14. Create a struct for CalculatorBrain
+
+#### 15. Create functions "performOperation" and "setOperand" within the struct
 
             a. func performOperation(_ symbol: String)
             
             b. func setOperand(_ operand: Double)
 
-#### 15.  Create a private variable "accumulator" and a variable "result"
+#### 16.  Create a private double var "accumulator" and a double var "result"
 
-#### 16. 
+#### 17. Set accumulator to operand within setOperand
+
+#### 18. Return accumulator within result using "get"
+
+#### 19. Go back to ViewController and create func "performOperation"
+
+            a. Set userIsInTheMiddleOfTyping to false
+
+#### 20. Create a private var "brain" that is a CalculatorBrain
+
+            a. private var brain = CalculatorBrain()
+
+#### 1
+
+#### 1
 
