@@ -63,8 +63,8 @@ iOS 10 mobile application calculator
       b. Set userIsInTheMiddleOfTyping to true
       
 #### 12. Create a double var "displayValue"
-
-            ``` var displayValue: Double {
+```
+            var displayValue: Double {
         get {
             return Double(display.text!)!
         }
@@ -72,8 +72,8 @@ iOS 10 mobile application calculator
         set {
             display.text = String(newValue)
         }
-    } ```
-      
+    }
+```
 #### 13. Create a new Swift file, name it "CalculatorBrain"
 
 #### 14. Create a struct for CalculatorBrain
