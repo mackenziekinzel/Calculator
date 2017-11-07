@@ -4,7 +4,7 @@ iOS 10 mobile application calculator
 ## How to Build:
 #### 1. Open and name a new single view application project in Xcode
 
-   a. Set language to Swift and devices to universal
+      a. Set language to Swift and devices to universal
   
 #### 2. Go to Main.storyboard, click-and-drag a button onto the storyboard
 
@@ -52,4 +52,23 @@ iOS 10 mobile application calculator
 
       a. var userIsInTheMiddleOfTyping = false
 
-#### 10.
+#### 10. Create an if-else statement for userIsInTheMiddleOfTyping
+
+      a. For if, use the textCurrentlyInDisplay variable that we created
+
+#### 11.  For else, set the display text equal to digit
+
+      a. display!.text = digit
+      
+      b. Set userIsInTheMiddleOfTyping to true
+      
+#### 12.  
+
+#### 13. 
+
+#### 14. 
+
+#### 15.  
+
+#### 16. 
+
