@@ -94,7 +94,7 @@ iOS 10 mobile application calculator
 
             a. private var brain = CalculatorBrain()
 
-#### 20. Create an addition button and give it an action func of "performOperation"
+#### 20. Create an addition button and give it an IBAction func of "performOperation"
 
 #### 21. Cheat a little bit by copying this into performOperation, completing the hookup of the "brain" to the UI
 ```
