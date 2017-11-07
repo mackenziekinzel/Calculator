@@ -56,19 +56,23 @@ iOS 10 mobile application calculator
 
       a. For if, use the textCurrentlyInDisplay variable that we created
 
-#### 11.  For else, set the display text equal to digit
+#### 11. For else, set the display text equal to digit
 
       a. display!.text = digit
       
       b. Set userIsInTheMiddleOfTyping to true
       
-#### 12.  
+#### 12. Create a new Swift file, name it "CalculatorBrain"
 
-#### 13. 
+#### 13. Create a struct for CalculatorBrain
 
-#### 14. 
+#### 14. Create functions "performOperation" and "setOperand" within the struct
 
-#### 15.  
+            a. func performOperation(_ symbol: String)
+            
+            b. func setOperand(_ operand: Double)
+
+#### 15.  Create a private variable "accumulator" and a variable "result"
 
 #### 16. 
 
