@@ -98,7 +98,9 @@ iOS 10 mobile application calculator
 
 #### 20. Create an equals button and hook it up performOperation
 
-            a. performOperation is one function that can controll all calculator operations through the "brain", but today, we will just be creating plus and equals
+            a. performOperation is one function that can controll all calculator operations through the "brain"
+            
+            b. Today, we will just be creating plus and equals
 
 #### 21. Cheat a little bit by copying this into performOperation, completing the hookup of the "brain" to the UI
 ```
@@ -116,6 +118,67 @@ iOS 10 mobile application calculator
         }
 
     }
+```
+#### 22. Cheat code for the entirety of CalculatorBrain (because Mackenzie was ambitious)
+```
+import Foundation
+
+struct CalculatorBrain {
+    
+    private var accumulator: Double?
+    
+    private enum Operation {
+        case binaryOperation((Double,Double) -> Double)
+        case equals
+    }
+    
+    private var operations: Dictionary<String,Operation> = [
+        "+": Operation.binaryOperation({ $0 + $1}),
+        "=": Operation.equals
+    ]
+    
+    mutating func performOperation(_ symbol: String) {
+        if let operation = operations[symbol] {
+            switch operation {
+            case .binaryOperation(let function):
+                if accumulator != nil {
+                pbo = PendingBinaryOperation(function: function, firstOperand: accumulator!)
+                accumulator = nil
+                }
+            case .equals:
+                performPendingBinaryOperation()
+                }
+            }
+        }
+
+private mutating func performPendingBinaryOperation() {
+    if pbo != nil && accumulator != nil {
+    accumulator = pbo!.perform(with: accumulator!)
+    pbo = nil
+    }
+}
+
+private var pbo: PendingBinaryOperation?
+
+private struct PendingBinaryOperation {
+    let function: (Double,Double) -> Double
+    let firstOperand: Double
+    
+    func perform(with secondOperand: Double) -> Double {
+        return function(firstOperand, secondOperand)
+    }
+}
+    
+    mutating func setOperand(_ operand: Double) {
+        accumulator = operand
+    }
+    
+    var result: Double? {
+        get {
+            return accumulator
+        }
+    }
+}
 ```
 
 
