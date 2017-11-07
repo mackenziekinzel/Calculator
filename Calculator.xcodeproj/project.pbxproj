@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E590CE061FB231A3009D0C7F /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E590CE051FB231A3009D0C7F /* CalculatorBrain.swift */; };
 		E5B250A41E66385000F3B9A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B250A31E66385000F3B9A0 /* AppDelegate.swift */; };
 		E5B250A61E66385000F3B9A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B250A51E66385000F3B9A0 /* ViewController.swift */; };
 		E5B250A91E66385000F3B9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B250A71E66385000F3B9A0 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E590CE051FB231A3009D0C7F /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		E5B250A01E66385000F3B9A0 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B250A31E66385000F3B9A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5B250A51E66385000F3B9A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B250A31E66385000F3B9A0 /* AppDelegate.swift */,
+				E590CE051FB231A3009D0C7F /* CalculatorBrain.swift */,
 				E5B250A51E66385000F3B9A0 /* ViewController.swift */,
 				E5B250A71E66385000F3B9A0 /* Main.storyboard */,
 				E5B250AA1E66385000F3B9A0 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E590CE061FB231A3009D0C7F /* CalculatorBrain.swift in Sources */,
 				E5B250A61E66385000F3B9A0 /* ViewController.swift in Sources */,
 				E5B250A41E66385000F3B9A0 /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				E5B250B41E66385000F3B9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
