@@ -78,17 +78,34 @@ iOS 10 mobile application calculator
 
 #### 14. Create a struct for CalculatorBrain
 
+            a. struct CalculatorBrain {}
+
 #### 15. Create functions "performOperation" and "setOperand" within the struct
 
             a. func performOperation(_ symbol: String)
             
-            b. func setOperand(_ operand: Double)
+            b. mutating func setOperand(_ operand: Double)
 
 #### 16. Create a private double var "accumulator" and a double var "result"
 
-#### 17. Set accumulator to operand within setOperand
+            a. private var accumulator: Double?
+            
+            b. var result: Double?
 
+#### 17. Set accumulator to operand within setOperand
+```
+    mutating func setOperand(_ operand: Double) {
+        accumulator = operand
+    }
+```
 #### 18. Return accumulator within result using "get"
+```
+    var result: Double? {
+        get {
+            return accumulator
+        }
+    }
+```
 
 #### 19. Go back to ViewController and create a private var "brain" that is a CalculatorBrain
 
@@ -180,5 +197,3 @@ private struct PendingBinaryOperation {
     }
 }
 ```
-
-
