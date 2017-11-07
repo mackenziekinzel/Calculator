@@ -93,8 +93,12 @@ iOS 10 mobile application calculator
 #### 19. Go back to ViewController and create a private var "brain" that is a CalculatorBrain
 
             a. private var brain = CalculatorBrain()
+            
+#### 20. Create an plus button and give it an IBAction func of "performOperation"
 
-#### 20. Create an addition button and give it an IBAction func of "performOperation"
+#### 20. Create an equals button and hook it up performOperation
+
+            a. performOperation is one function that can controll all calculator operations through the "brain", but today, we will just be creating plus and equals
 
 #### 21. Cheat a little bit by copying this into performOperation, completing the hookup of the "brain" to the UI
 ```
