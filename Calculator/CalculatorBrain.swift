@@ -18,7 +18,7 @@ struct CalculatorBrain {
     }
     
     private var operations: Dictionary<String,Operation> = [
-        "+": Operation.binaryOperation({ $0 + $1}),
+        "+": Operation.binaryOperation({ $0 + $1 }),
         "=": Operation.equals
     ]
     
