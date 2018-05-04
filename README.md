@@ -1,4 +1,4 @@
-# Calculator
+# Calculator - A Hacksu Lesson
 iOS 10 mobile application calculator
 
 ## How to Build:
@@ -197,4 +197,3 @@ private struct PendingBinaryOperation {
     }
 }
 ```
-# Calculator
