@@ -8,19 +8,11 @@
 
 import Foundation
 
-func changeSign(operand: Double) -> Double {
-    return -operand
-}
-
-func multiply(operand: Double,Double) -> Double {
-    
-}
-
 struct CalculatorBrain {
     
     private var accumulator: Double?
     
-    private var pbo: PendingBinaryOperation?
+    private var pendingBinaryOperation: PendingBinaryOperation?
     
     private enum Operation {
         case binaryOperation((Double,Double) -> Double)
@@ -31,10 +23,12 @@ struct CalculatorBrain {
     
     private var operations: Dictionary<String,Operation> = [
         "+" : Operation.binaryOperation({ $0 + $1 }),
-        "⨉" : Operation.binaryOperation(multiply),
+        "-" : Operation.binaryOperation({ $0 - $1 }),
+        "x" : Operation.binaryOperation({ $0 * $1 }),
+        "÷" : Operation.binaryOperation({ $0 / $1 }),
         "√" : Operation.unaryOperation (sqrt),
         "cos" : Operation.unaryOperation (cos),
-        "±" : Operation.unaryOperation(changeSign),
+        "±" : Operation.unaryOperation({ -$0 }),
         "π" : Operation.constant (Double.pi),
         "e" : Operation.constant (M_E),
         "=" : Operation.equals
@@ -55,7 +49,7 @@ struct CalculatorBrain {
                 
             case .binaryOperation(let function):
                 if accumulator != nil {
-                    pbo = PendingBinaryOperation(function: function, firstOperand: accumulator!)
+                    pendingBinaryOperation = PendingBinaryOperation(function: function, firstOperand: accumulator!)
                     accumulator = nil
                 }
                 
@@ -66,9 +60,9 @@ struct CalculatorBrain {
     }
     
     private mutating func performPendingBinaryOperation() {
-        if pbo != nil && accumulator != nil {
-            accumulator = pbo!.perform(with: accumulator!)
-            pbo = nil
+        if pendingBinaryOperation != nil && accumulator != nil {
+            accumulator = pendingBinaryOperation!.perform(with: accumulator!)
+            pendingBinaryOperation = nil
         }
     }
     
