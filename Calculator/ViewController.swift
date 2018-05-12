@@ -43,16 +43,6 @@ class ViewController: UIViewController {
         }
         
         if let mathematicalSymbol = sender.currentTitle {
-            
-            switch mathematicalSymbol{
-            case "π":
-                displayValue = Double.pi
-            case "√":
-                displayValue = sqrt(displayValue)
-            default:
-                break
-            }
-            
             brain.performOperation(mathematicalSymbol)
         }
         
