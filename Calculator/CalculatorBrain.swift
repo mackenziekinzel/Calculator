@@ -11,7 +11,6 @@ import Foundation
 struct CalculatorBrain {
     
     private var accumulator: Double?
-    
     private var pendingBinaryOperation: PendingBinaryOperation?
     
     private enum Operation {
