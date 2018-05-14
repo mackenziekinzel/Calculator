@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func clear(_ sender: UIButton) {
+        display!.text! = ""
+    }
+    
     var displayValue: Double {
         get {
             return Double(display.text!)!

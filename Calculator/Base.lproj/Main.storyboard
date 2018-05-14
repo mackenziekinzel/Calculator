@@ -24,54 +24,62 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eRX-zG-3Kc" userLabel="Calculator Stack View">
                                 <rect key="frame" x="20" y="28" width="335" height="631"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-7u-87F">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="a9K-7u-87F">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="I2d-S4-ntH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zaF-b8-FB6" userLabel="Keypad Stack View">
-                                        <rect key="frame" x="0.0" y="70" width="335" height="561"/>
+                                        <rect key="frame" x="0.0" y="70" width="335" height="491"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jvz-FY-Zuj">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="104"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abY-CZ-3DX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="104"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="+"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ns-tQ-jqy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUS-B7-iHY">
-                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="104"/>
+                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="-"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="45"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJb-gG-Q0J"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bn7-sV-cRh">
-                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="104"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="÷"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
+                                                        <state key="normal" title="÷">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dxZ-Tr-YU3"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JV-v0-HWw">
-                                                        <rect key="frame" x="259" y="0.0" width="76" height="104"/>
+                                                        <rect key="frame" x="259" y="0.0" width="76" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="x"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
+                                                        <state key="normal" title="x">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sp4-ku-MVa"/>
                                                         </connections>
@@ -79,40 +87,48 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WIN-N7-vmY">
-                                                <rect key="frame" x="0.0" y="114" width="335" height="104.5"/>
+                                                <rect key="frame" x="0.0" y="100" width="335" height="90.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSK-D2-svA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="104.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="90.5"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="π"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                        <state key="normal" title="π">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IdL-7Q-qSg"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5U-y7-VfZ">
-                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="7"/>
+                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7v-QY-psJ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZx-mM-87O">
-                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="8"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLy-Qr-7WT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-C7-Wjd">
-                                                        <rect key="frame" x="259" y="0.0" width="76" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="9"/>
+                                                        <rect key="frame" x="259" y="0.0" width="76" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nup-2T-wT2"/>
                                                         </connections>
@@ -120,40 +136,48 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p75-CF-TmP">
-                                                <rect key="frame" x="0.0" y="228.5" width="335" height="104"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="335" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ln-mK-WI7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="104"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="√"/>
+                                                        <state key="normal" title="√">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eED-iO-TLs"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GU-Ek-aCp">
-                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="104"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="4"/>
+                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="90"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8QZ-ja-9WM"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeM-x5-MfI">
-                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="104"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="5"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="90"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iHZ-pl-NnJ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIJ-8F-Qr1">
-                                                        <rect key="frame" x="259" y="0.0" width="76" height="104"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="6"/>
+                                                        <rect key="frame" x="259" y="0.0" width="76" height="90"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v0u-zW-dpo"/>
                                                         </connections>
@@ -161,40 +185,48 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-wJ-EQc">
-                                                <rect key="frame" x="0.0" y="342.5" width="335" height="104.5"/>
+                                                <rect key="frame" x="0.0" y="300.5" width="335" height="90.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlx-bt-GAG" userLabel="cos">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="104.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="90.5"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="cos"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="cos">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlV-gi-dbp"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXw-tN-FBU">
-                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="1"/>
+                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8h-Aj-z0p"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-kF-bRp">
-                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="2"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWL-of-S4O"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euu-Sz-YDk">
-                                                        <rect key="frame" x="259" y="0.0" width="76" height="104.5"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="3"/>
+                                                        <rect key="frame" x="259" y="0.0" width="76" height="90.5"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOh-yb-tRN"/>
                                                         </connections>
@@ -202,40 +234,48 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zu2-A2-BbF">
-                                                <rect key="frame" x="0.0" y="457" width="335" height="104"/>
+                                                <rect key="frame" x="0.0" y="401" width="335" height="90"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-VC-TuP" userLabel="cos">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="104"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJX-VC-TuP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="±"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <state key="normal" title="±">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZG8-5p-MTy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcc-OQ-0Bi">
-                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="104"/>
+                                                        <rect key="frame" x="86.5" y="0.0" width="76" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="."/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="45"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cY4-3s-Pwe"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG1-GS-v9r">
-                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="104"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="0"/>
+                                                        <rect key="frame" x="172.5" y="0.0" width="76.5" height="90"/>
+                                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="touchDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBY-v1-x16"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksb-II-qBp">
-                                                        <rect key="frame" x="259" y="0.0" width="76" height="104"/>
+                                                        <rect key="frame" x="259" y="0.0" width="76" height="90"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="="/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWa-h2-CsD"/>
                                                         </connections>
@@ -244,10 +284,24 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iv-QY-BXA">
+                                        <rect key="frame" x="0.0" y="571" width="335" height="60"/>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="tel-CV-pEW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                        <state key="normal" title="CLEAR">
+                                            <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="niS-oY-9Cv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eRX-zG-3Kc" secondAttribute="bottom" constant="8" symbolic="YES" id="0oW-H8-0o0"/>
                             <constraint firstItem="eRX-zG-3Kc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="HrR-Y2-1Yv"/>
