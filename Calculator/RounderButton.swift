@@ -1,5 +1,5 @@
 //
-//  RoundButton.swift
+//  RounderButton.swift
 //  Calculator
 //
 //  Created by Mackenzie Kinzel on 5/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundButton: UIButton {
+class RounderButton: UIButton {
 
     func setupView() {
             self.layer.cornerRadius = 15.0
